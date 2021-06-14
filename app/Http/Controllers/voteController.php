@@ -9,7 +9,7 @@ class voteController extends Controller
 {
     public function index(){
         
-        return view("welcome");
+        return view("landing");
     }
 
     public function create(){
