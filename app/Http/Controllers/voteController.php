@@ -20,7 +20,14 @@ class voteController extends Controller
         $candidates = Candidates::all();
         $users = User::all();
         
+         /*
+            if(auth->username === admin){
+                return admin view
+            }else{
+                return member view;
+            }
         
+        */
 
         return view('landing');
     }
@@ -33,6 +40,7 @@ class voteController extends Controller
     public function create()
     {
         $candidates = Candidates::all();
+       
 
     }
 
@@ -43,10 +51,21 @@ class voteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         
+        
+        return view('memberLanding');
     }
 
+    public function vote(Request $request)
+    {   
+        $request->validate([
+            'President' => 'required',
+            'Vice' => 'required'
+            ]); 
+        
+        return view('memberLanding');
+    }
     /**
      * Display the specified resource.
      *
