@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
-Route::get('/auth', [App\Http\Controllers\HomeController::class, 'index'])->name('auth');
-
-route::get('/', 'App\Http\Controllers\voteController@index')->name('/');
-route::POST('/store', 'App\Http\Controllers\voteController@store')->name('/store');
-route::get('/result', 'App\Http\Controllers\voteController@result')->name('/result');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
+route::get('/home', 'App\Http\Controllers\voteController@index')->name('/home');
+route::POST('/vote', 'App\Http\Controllers\voteController@store')->name('/vote'); 
+route::get('/result', 'App\Http\Controllers\voteController@show')->name('/result');
 route::POST('/del', 'App\Http\Controllers\voteController@delete')->name('/del');
 

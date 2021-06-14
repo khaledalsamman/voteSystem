@@ -78,6 +78,15 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-white bg-dark text-center py-3">© 2021 Copyright: groupname
+              
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
     </div>
 </body>
 </html>
